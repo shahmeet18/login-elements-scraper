@@ -2,6 +2,25 @@
 
 A comprehensive web scraping tool that fetches webpage content, identifies login form elements, and extracts them for analysis. Supports CLI usage, REST API, and web interface.
 
+## Quick Start - Web Interface
+
+The easiest way to use the application is through the web interface:
+
+1. **Start the server**:
+   ```bash
+   python app.py
+   # or
+   ./run.sh
+   ```
+
+2. **Open your browser** and navigate to `http://localhost:8000`
+
+3. **Enter a URL** in the input field or click on one of the example tags
+
+4. **Click "Scrape Login Elements"** - the tool automatically handles both static and dynamic pages
+
+5. **View results** displayed on the page and copy the JSON using the "Copy JSON" button
+
 ## Features
 
 - **URL Validation**: Checks for valid HTTP/HTTPS URLs and automatically adds https:// if missing
