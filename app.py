@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from pydantic import BaseModel
 from typing import List, Optional
 import scraper  # Import the existing scraper module
 
@@ -29,26 +28,33 @@ app.add_middleware(
 # Mount static files (but exclude API routes)
 app.mount("/static", StaticFiles(directory=".", html=False), name="static")
 
-# Pydantic models
-class ScrapeRequest(BaseModel):
+# Data models using dataclasses (no pydantic dependency)
+from dataclasses import dataclass
+
+@dataclass
+class ScrapeRequest:
     url: str
 
-class LoginElement(BaseModel):
+@dataclass
+class LoginElement:
     type: str
     html: str
 
-class ScrapeResponse(BaseModel):
+@dataclass
+class ScrapeResponse:
     url: str
     login_elements: List[LoginElement]
     count: int
 
-class ErrorResponse(BaseModel):
+@dataclass
+class ErrorResponse:
     success: bool = False
-    error: str
-    error_code: str
+    error: str = ""
+    error_code: str = ""
     details: Optional[str] = None
 
-class APIResponse(BaseModel):
+@dataclass
+class APIResponse:
     success: bool
     data: Optional[ScrapeResponse] = None
     error: Optional[ErrorResponse] = None
