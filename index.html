@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Scraper API Interface</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Login Scraper API</h1>
+        <p>Extract login elements from web pages</p>
+    </header>
+
+    <main>
+        <section class="scraper-form">
+            <form id="scrapeForm">
+                <div class="form-group">
+                    <label for="url">Website URL:</label>
+                    <input type="url" id="url" name="url" placeholder="https://example.com" required>
+                    <span class="error" id="urlError"></span>
+                    <div class="example-tags">
+                        <span class="tag" data-url="https://github.com/login">GitHub</span>
+                        <span class="tag" data-url="https://stackoverflow.com/users/login">Stack Overflow</span>
+                        <span class="tag" data-url="https://www.linkedin.com/login">LinkedIn</span>
+                        <span class="tag" data-url="https://accounts.google.com/signin">Google</span>
+                        <span class="tag" data-url="https://www.box.com/login">Box</span>
+                        <span class="tag" data-url="https://login.mailchimp.com">Mailchimp</span>
+                        <span class="tag" data-url="https://www.dropbox.com/login">Dropbox</span>
+                        <span class="tag" data-url="https://www.salesforce.com/login">Salesforce</span>
+                        <span class="tag" data-url="https://edition.cnn.com/login">CNN</span>
+                        <span class="tag" data-url="https://myaccount.nytimes.com/auth/login">The New York Times</span>
+                        <span class="tag" data-url="https://www.amazon.com/ap/signin">Amazon</span>
+                        <span class="tag" data-url="https://accounts.shopify.com/store-login">Shopify</span>
+                        <span class="tag" data-url="https://login.salesforce.com">Salesforce</span>
+                        <span class="tag" data-url="https://www.zendesk.com/login">Zendesk</span>
+                        <span class="tag" data-url="https://login.activecampaign.com">ActiveCampaign</span>
+                        <span class="tag" data-url="https://medium.com/m/signin">Medium</span>
+                        <span class="tag" data-url="https://wordpress.com/log-in">WordPress.com</span>
+                        <span class="tag" data-url="https://wpforms.com/login">WPForms</span>
+                    </div>
+                </div>
+
+
+                <button type="submit" id="submitBtn">Scrape Login Elements</button>
+            </form>
+        </section>
+
+        <section class="results" id="resultsSection" style="display: none;">
+            <h2>Results</h2>
+            <div class="results-header">
+                <span id="resultCount"></span>
+                <button id="copyBtn">Copy JSON</button>
+            </div>
+            <pre id="jsonOutput"></pre>
+        </section>
+
+        <section class="loading" id="loadingSection" style="display: none;">
+            <div class="spinner"></div>
+            <p>Scraping login elements...</p>
+        </section>
+
+        <section class="error" id="errorSection" style="display: none;">
+            <h2>Error</h2>
+            <p id="errorMessage"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Login Scraper API. Built with FastAPI.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
