@@ -2,35 +2,40 @@
 
 A comprehensive web scraping tool that fetches webpage content, identifies login form elements, and extracts them for analysis. Supports CLI usage, REST API, and web interface.
 
+## Installation
+
+1. Install Python 3.7+ if you haven't already
+2. Clone the repository:
+
+```bash
+git clone https://github.com/shahmeet18/webscraper-v2.git
+cd webscraper-v2
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Quick Start - Web Interface
 
-The easiest way to use the application is through the web interface:
+After completing the installation steps above, the easiest way to use the application is through the web interface:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/shahmeet18/webscraper-v2.git
-   cd webscraper-v2
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Start the server**:
+1. **Start the server**:
    ```bash
    python app.py
    # or
    ./run.sh
    ```
 
-4. **Open your browser** and navigate to `http://localhost:8000`
+2. **Open your browser** and navigate to `http://localhost:8000`
 
-5. **Enter a URL** in the input field or click on one of the example tags
+3. **Enter a URL** in the input field or click on one of the example tags
 
-6. **Click "Scrape Login Elements"** - the tool automatically handles both static and dynamic pages
+4. **Click "Scrape Login Elements"** - the tool automatically handles both static and dynamic pages
 
-7. **View results** displayed on the page and copy the JSON using the "Copy JSON" button
+5. **View results** displayed on the page and copy the JSON using the "Copy JSON" button
 
 ## Features
 
@@ -42,16 +47,6 @@ The easiest way to use the application is through the web interface:
 - **Multiple Interfaces**: Command Line Interface, REST API, and Web Interface
 - **Error Handling**: Comprehensive error handling with specific error codes
 - **Web UI**: Interactive web interface with example URL tags for quick testing
-
-## Installation
-
-1. Install Python 3.7+ if you haven't already
-2. Clone or download this project
-3. Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
 
 ## Usage
 
