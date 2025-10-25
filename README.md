@@ -52,17 +52,13 @@ After completing the installation steps above, the easiest way to use the applic
 
 ### Command Line Interface
 
-#### Basic Usage (Static Pages)
+#### Basic Usage
 
 ```bash
 python scraper.py https://example.com/login
 ```
 
-#### For Dynamic/SPA Pages
-
-```bash
-python scraper.py https://example.com/login --selenium
-```
+The scraper automatically tries static scraping first, then falls back to Selenium for dynamic/SPA pages if no login elements are found.
 
 ### REST API
 
@@ -226,7 +222,6 @@ Returns structured JSON response with login elements found.
 - `webdriver-manager`: For automatic Chrome driver management
 - `fastapi`: For building the REST API
 - `uvicorn`: For running the FastAPI application
-- `pydantic`: For data validation and serialization
 
 ## Learning Resources
 
