@@ -9,7 +9,7 @@ A comprehensive web scraping tool that fetches webpage content, identifies login
 
 ```bash
 git clone https://github.com/shahmeet18/login-elements-scraper
-cd webscraper-v2
+cd login-elements-scraper
 ```
 
 3. Create a virtual environment and install dependencies:
@@ -29,7 +29,6 @@ After completing the installation steps above, the easiest way to use the applic
 1. **Start the server**:
    ```bash
    python app.py
-   # or
    ./run.sh
    ```
 
