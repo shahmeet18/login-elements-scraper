@@ -8,7 +8,7 @@ A comprehensive web scraping tool that fetches webpage content, identifies login
 2. Clone the repository:
 
 ```bash
-git clone https://github.com/shahmeet18/webscraper-v2.git
+git clone https://github.com/shahmeet18/login-elements-scraper
 cd webscraper-v2
 ```
 
