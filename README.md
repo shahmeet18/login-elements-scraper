@@ -12,11 +12,15 @@ git clone https://github.com/shahmeet18/webscraper-v2.git
 cd webscraper-v2
 ```
 
-3. Install dependencies:
+3. Create a virtual environment and install dependencies:
 
 ```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+Note: On macOS with Homebrew, pip may not be available directly, so using a virtual environment is recommended to avoid conflicts with the system Python installation.
 
 ## Quick Start - Web Interface
 
